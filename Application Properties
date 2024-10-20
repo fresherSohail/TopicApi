@@ -1,0 +1,4 @@
+spring.application.name=TopicBycourse
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+logging.level.org.springframework.web=DEBUG
