@@ -1,0 +1,40 @@
+package com.courseByTopic.TopicBycourse.Topic;
+
+import java.util.*;
+import org.springframework.stereotype.Service;
+
+@Service
+public class TopicService {
+
+	private TopicRepository topicRepository;
+	
+	public List<Topic> topics = new ArrayList<>(
+			Arrays.asList(
+			new Topic("Java", "Java", "Java Description"),
+			new Topic("Python", "Python", "Python Description")
+			             )
+	  );
+	
+	public List<Topic> getAllTopic(){
+		List<Topic> topics = new ArrayList<>();
+		topicRepository.findAll().forEach(topics::add);
+		return topics;
+	}
+	
+	public Topic getTopicById(String id) {
+		return topicRepository.findById(id).orElse(null);
+	}
+	
+	public void addTopic(Topic topic) {
+		 topicRepository.save(topic);
+	}
+	
+	public void updateTopic(String id, Topic topic) {
+		 topicRepository.save(topic);
+	}
+	
+	public void deleteTopic(String id) {
+		topicRepository.deleteById(id);
+	}
+	
+}
