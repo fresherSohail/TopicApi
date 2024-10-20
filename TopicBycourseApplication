@@ -1,0 +1,15 @@
+package com.courseByTopic.TopicBycourse.Topic;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+@SpringBootApplication
+@ComponentScan(basePackages = {"com.courseByTopic.TopicBycourse.controller"})
+public class TopicBycourseApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(TopicBycourseApplication.class, args);
+	}
+
+}
